@@ -1,5 +1,5 @@
 import React from "react";
-import './divider.scss';
+import './divider.scss'; 
 
 export type Aligment = "start" | "center" | "end"
 export type LineStyle = "solid" | "dashed" | "dotted"
@@ -18,7 +18,11 @@ export const Divider = ({ alignment, lineStyle, lineWeight, children }: DividerP
             className={['divider', `divider--${alignment}`].join(' ')}
         >
             <span className={['left', `line-style--${lineStyle}`, `line-weight--${lineWeight}`].join(' ')} />
-            {children}
+            
+            <i className="bi bi-alarm-fill">
+                {children}
+            </i>
+
             <span className={['right', `line-style--${lineStyle}`, `line-weight--${lineWeight}`].join(' ')} />
         </div>
     )
